@@ -7,14 +7,6 @@ const App = () => {
   const [addedReplicators, setAddedReplicators] = useState([])
   const [removeReplicators, setRemovedReplicators] = useState([])
 
-  const test = () => {
-    return 'Vasco'
-  }
-
-  const handleClick = () => {
-    setCount(count + 1)
-  }
-
   const handleAddReplicator = () => {
     if (replicators.length > 0) {
       const index = Math.floor(Math.random() * replicators.length)
@@ -58,7 +50,7 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <p onClick={handleClick}>{ test() } { count }</p>
+        <h1>Star Realms Replicators</h1>
         <p>{ replicators }</p>
         <button 
           onClick={handleAddReplicator}
