@@ -1,4 +1,14 @@
+# Replicators Star Realms (WIP - early stages)
+
+![star realms logo](https://i.ytimg.com/vi/BsoA9x8D__c/maxresdefault.jpg "star realms logo")
+
+A Star Realms Replicators (Solo Version by [ShaunGamer](https://boardgamegeek.com/thread/1343505/star-realms-replicators)) helper. 
+It'll be used to help add random replicators and keep track of the authority of the replicators.
+I had the idea to do this since there's an app for Android that does this, but I don't have an Android, neither an Apple developers account.  
+So it'll be a website I can visit when playing this solo version.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
