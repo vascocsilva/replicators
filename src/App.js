@@ -35,6 +35,12 @@ const App = () => {
     setAddedReplicators(addedReplicators)    
   }
 
+  const renderAddText = () => {
+    return replicators.length === 0 && removeReplicators.length > 0
+      ? 'Restock Pool'
+      : 'Add Replicator'
+  }
+
   const renderAddedReplicators = () => {
     return addedReplicators.map((item, index) => {
       return (
@@ -54,7 +60,12 @@ const App = () => {
       <header className="App-header">
         <p onClick={handleClick}>{ test() } { count }</p>
         <p>{ replicators }</p>
-        <button onClick={handleAddReplicator}>Add Replicator</button>
+        <button 
+          onClick={handleAddReplicator}
+          disabled={replicators.length === 0 && removeReplicators.length === 0}
+        >
+          { renderAddText() }
+        </button>
         <p>{ renderAddedReplicators() }</p>
         <p>{ removeReplicators }</p>
       </header>
