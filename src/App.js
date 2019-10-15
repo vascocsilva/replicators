@@ -50,7 +50,6 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Star Realms Replicators</h1>
         <button
           onClick={handleAddReplicator}
           disabled={replicators.length === 0 && removeReplicators.length === 0}
