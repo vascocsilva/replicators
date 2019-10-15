@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './App.css';
 
 const App = () => {
-  const [count, setCount] = useState(0)
   const [replicators, setReplicators] = useState([5, 5, 5, 6, 6, 7, 7, 8, 8, 8])
   const [addedReplicators, setAddedReplicators] = useState([])
   const [removeReplicators, setRemovedReplicators] = useState([])
@@ -37,6 +36,7 @@ const App = () => {
     return addedReplicators.map((item, index) => {
       return (
         <button 
+          className="replicator"
           key={index}
           onClick={() => handleRemoveReplicator(index)}
         >
@@ -51,15 +51,15 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <h1>Star Realms Replicators</h1>
-        <p>{ replicators }</p>
-        <button 
+        <button
           onClick={handleAddReplicator}
           disabled={replicators.length === 0 && removeReplicators.length === 0}
         >
           { renderAddText() }
         </button>
-        <p>{ renderAddedReplicators() }</p>
-        <p>{ removeReplicators }</p>
+        <div className="replicators">
+          { renderAddedReplicators() }
+        </div>
       </header>
     </div>
   );

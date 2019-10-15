@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+button {
+	appearance: none;
+	height: 60px;
+	margin-bottom: 30px;
+	width: 200px;
+}
+
+.replicator {
+	border-radius: 50%;
+	height: 60px;
+	margin: 10px;
+	width: 60px;
+	font-size: 28px;
+}
+
+.replicators {
+	align-items: center;		
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	min-height: 150px;
+	width: 95%;
+}
+
