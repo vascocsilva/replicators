@@ -11,7 +11,7 @@ const ButtonStyled = styled.button`
 	border: 1px solid ${colors.mainBlue};
 	color: ${colors.mainBlue};
 	font-size: 14px;
-	height: 40px;
+	height: 50px;
 	margin-bottom: 30px;
 	width: 200px;
 	text-transform: uppercase;

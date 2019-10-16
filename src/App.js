@@ -1,10 +1,18 @@
 import React, { useState } from 'react'
 
+import styled from 'styled-components'
+
 import Replicators from './components/Replicators'
 import ReplicatorButton from './components/ReplicatorButton'
 import Button from './components/Button'
 import Authority from './components/Authority'
 import './App.css'
+
+const ButtonWrapper = styled.div`
+  position: fixed;
+  top: 10px;
+  width: 100%;
+`
 
 const App = () => {
   const [replicators, setReplicators] = useState([5, 5, 5, 6, 6, 7, 7, 8, 8, 8])
@@ -54,12 +62,14 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <Button
-          callback={handleAddReplicator}
-          disabled={replicators.length === 0 && removeReplicators.length === 0}
-        >
-          { renderAddText() }
-        </Button>
+        <ButtonWrapper>
+          <Button
+            callback={handleAddReplicator}
+            disabled={replicators.length === 0 && removeReplicators.length === 0}
+          >
+            { renderAddText() }
+          </Button>
+        </ButtonWrapper>
         <Replicators>
           { renderAddedReplicators() }
         </Replicators>
