@@ -4,7 +4,7 @@ import { number, func } from 'prop-types'
 import styled from 'styled-components'
 
 import { colors } from '../constants/colors'
-import spaceship from '../images/spaceship.png'
+import spaceship from '../images/spacecraft.png'
 
 const ReplicatorButtonStyled = styled.button`
 	animation: buttonAnim 0.3s ease-in;
@@ -13,13 +13,13 @@ const ReplicatorButtonStyled = styled.button`
 	background-size: contain;
 	border-radius: 50%;
 	border: 1px solid ${colors.mainBlue};
-	box-shadow: 0px 7px 0px 0px ${colors.mainBlue};
-	color: ${colors.mainBlue};
+	box-shadow: 0px 7px 0px 0px ${colors.darkBlue};
+	color: ${colors.black};
 	font-size: 30px;
 	height: 70px;
 	margin: 10px 5px;
 	width: 70px;
-	-webkit-text-stroke: 1px black;
+	-webkit-text-stroke: 1px ${colors.mainBlue};
 	font-weight: 700;
 		
 	@keyframes buttonAnim {
@@ -28,7 +28,12 @@ const ReplicatorButtonStyled = styled.button`
 	}
 `
 
-const ReplicatorButton = ({ index, value, callback }) => {
+const ReplicatorButton = ({ 
+	index, 
+	value, 
+	callback, 
+	disabled,
+}) => {
   return (
   	<ReplicatorButtonStyled 
       className="replicator"
