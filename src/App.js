@@ -1,5 +1,9 @@
-import React, { useState } from 'react';
-import './App.css';
+import React, { useState } from 'react'
+
+import Replicators from './components/Replicators'
+import ReplicatorButton from './components/ReplicatorButton'
+import Button from './components/Button'
+import './App.css'
 
 const App = () => {
   const [replicators, setReplicators] = useState([5, 5, 5, 6, 6, 7, 7, 8, 8, 8])
@@ -35,13 +39,12 @@ const App = () => {
   const renderAddedReplicators = () => {
     return addedReplicators.map((item, index) => {
       return (
-        <button 
-          className="replicator"
+        <ReplicatorButton
           key={index}
-          onClick={() => handleRemoveReplicator(index)}
-        >
-          { item }
-        </button>
+          value={item} 
+          index={index} 
+          callback={handleRemoveReplicator} 
+        />
       )
     })
   }
@@ -50,15 +53,15 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <button
-          onClick={handleAddReplicator}
+        <Button
+          callback={handleAddReplicator}
           disabled={replicators.length === 0 && removeReplicators.length === 0}
         >
           { renderAddText() }
-        </button>
-        <div className="replicators">
+        </Button>
+        <Replicators>
           { renderAddedReplicators() }
-        </div>
+        </Replicators>
       </header>
     </div>
   );

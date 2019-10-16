@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('background.jpg');
 }
 
 code {
@@ -13,15 +14,7 @@ code {
 }
 
 button {
-	appearance: none;
-	height: 60px;
-	margin-bottom: 30px;
-	width: 200px;
-	/*background-color: #282c34;*/
-	background-color: transparent;
-	border: 1px solid tomato;
-	color: tomato;
-	font-size: 20px;
+
 }
 
 button:disabled {
@@ -33,24 +26,10 @@ button:focus {
 	outline: 0;
 }
 
-.replicator {
-	animation-duration: 1s;
-	border-radius: 50%;
-	font-size: 22px;
-	height: 60px;
-	margin: 10px;
-	width: 60px;
-  animation-name: myAnimation;
-  background-image: url('rocket.png');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.replicators {
+/*.replicators {
 	min-height: 320px;
 	width: 95%;
-}
+}*/
 
 @keyframes myAnimation {
 	from {
