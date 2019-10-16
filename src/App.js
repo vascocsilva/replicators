@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Replicators from './components/Replicators'
 import ReplicatorButton from './components/ReplicatorButton'
 import Button from './components/Button'
+import Authority from './components/Authority'
 import './App.css'
 
 const App = () => {
@@ -62,6 +63,7 @@ const App = () => {
         <Replicators>
           { renderAddedReplicators() }
         </Replicators>
+        <Authority />
       </header>
     </div>
   );

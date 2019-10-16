@@ -1,5 +1,5 @@
 import React from 'react'
-import { node, func, boolean } from 'prop-types'
+import { node, func, boolean, object } from 'prop-types'
 
 import styled from 'styled-components'
 
@@ -17,9 +17,9 @@ const ButtonStyled = styled.button`
 	text-transform: uppercase;
 `
 
-const Button = ({ children, callback, disabled }) => {
+const Button = ({ children, callback, disabled, styles }) => {
   return (
-  	<ButtonStyled onClick={callback} disabled={disabled}>
+  	<ButtonStyled onClick={callback} disabled={disabled} style={styles}>
   		{ children }
   	</ButtonStyled>
   )
@@ -29,10 +29,12 @@ Button.propTypes = {
   children: node.isRequired,
   callback: func.isRequired,
   disabled: boolean,
+  styles: object,
 }
 
 Button.defaultProps = {
   disabled: false,
+  styles: {},
 }
 
 
