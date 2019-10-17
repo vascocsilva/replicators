@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import Replicators from './components/Replicators'
 import ReplicatorButton from './components/ReplicatorButton'
-import Button from './components/Button'
+import { Button, CircularButton } from './components/buttons'
 import Authority from './components/Authority'
 import './App.css'
 
@@ -13,7 +13,6 @@ const ButtonWrapper = styled.div`
   top: 10px;
   width: 100%;
 `
-
 const App = () => {
   const [replicators, setReplicators] = useState([5, 5, 5, 6, 6, 7, 7, 8, 8, 8])
   const [addedReplicators, setAddedReplicators] = useState([])
@@ -64,7 +63,7 @@ const App = () => {
       <header className="App-header">
         <ButtonWrapper>
           <Button
-            callback={handleAddReplicator}
+            onClick={handleAddReplicator}
             disabled={replicators.length === 0 && removeReplicators.length === 0}
           >
             { renderAddText() }
@@ -73,6 +72,7 @@ const App = () => {
         <Replicators>
           { renderAddedReplicators() }
         </Replicators>
+        
         <Authority />
       </header>
     </div>
