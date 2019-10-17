@@ -41,6 +41,7 @@ const Helper = styled.div`
 	&.show {
 		display: block;
 		opacity: 1;
+		z-index: 2;
 	}
 `
 
