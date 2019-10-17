@@ -27,7 +27,7 @@ const AuthorityStyled = styled.div`
 const Helper = styled.div`
 	background-color: rgba(0, 0, 0, .7);
 	background-image: url(${helper});
-	background-position: bottom;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 100%;
 	bottom: 0;
