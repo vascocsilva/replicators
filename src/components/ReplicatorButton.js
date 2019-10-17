@@ -4,7 +4,7 @@ import { number, func } from 'prop-types'
 import styled from 'styled-components'
 
 import { colors } from '../constants/colors'
-import spaceship from '../images/spacecraft.png'
+import spaceship from '../images/spacecraft2.png'
 
 const ReplicatorButtonStyled = styled.button`
 	animation: buttonAnim 0.3s ease-in;
