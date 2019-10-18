@@ -16,7 +16,7 @@ const ButtonWrapper = styled.div`
 const App = () => {
   const [replicators, setReplicators] = useState([5, 5, 5, 6, 6, 7, 7, 8, 8, 8])
   const [addedReplicators, setAddedReplicators] = useState([])
-  const [removeReplicators, setRemovedReplicators] = useState([])
+  const [removedReplicators, setRemovedReplicators] = useState([])
 
   const handleAddReplicator = () => {
     if (replicators.length > 0) {
@@ -27,19 +27,19 @@ const App = () => {
       replicators.splice(index, 1)
       setReplicators(replicators)
     } else {
-      setReplicators([...replicators, ...removeReplicators])
+      setReplicators([...replicators, ...removedReplicators])
       setRemovedReplicators([])
     }
   }
 
   const handleRemoveReplicator = (index) => {
-    setRemovedReplicators([...removeReplicators, addedReplicators[index]])
+    setRemovedReplicators([...removedReplicators, addedReplicators[index]])
     addedReplicators.splice(index, 1)
     setAddedReplicators(addedReplicators)    
   }
 
   const renderAddText = () => {
-    return replicators.length === 0 && removeReplicators.length > 0
+    return replicators.length === 0 && removedReplicators.length > 0
       ? 'Restock Pool'
       : 'Add Replicator'
   }
@@ -63,7 +63,7 @@ const App = () => {
         <ButtonWrapper>
           <Button
             onClick={handleAddReplicator}
-            disabled={replicators.length === 0 && removeReplicators.length === 0}
+            disabled={replicators.length === 0 && removedReplicators.length === 0}
           >
             { renderAddText() }
           </Button>
