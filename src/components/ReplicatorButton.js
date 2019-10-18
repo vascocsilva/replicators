@@ -7,35 +7,35 @@ import { colors } from '../constants/colors'
 import spaceship from '../images/spacecraft2.png'
 
 const ReplicatorButtonStyled = styled.button`
-	animation: buttonAnim 0.3s ease-in;
-	background-color: ${colors.black};
-	background-image: url(${spaceship});
-	background-size: contain;
-	border-radius: 50%;
-	border: 1px solid ${colors.mainBlue};
-	box-shadow: 0px 7px 0px 0px ${colors.darkBlue};
-	color: ${colors.black};
-	font-size: 30px;
-	height: 70px;
-	margin: 10px 5px;
-	width: 70px;
-	-webkit-text-stroke: 1px ${colors.mainBlue};
-	font-weight: 700;
-		
-	@keyframes buttonAnim {
-		0% { opacity: 0; }
-		100% { opacity: 1; }
-	}
+    animation: buttonAnim 0.3s ease-in;
+    background-color: ${colors.black};
+    background-image: url(${spaceship});
+    background-size: contain;
+    border-radius: 50%;
+    border: 1px solid ${colors.mainBlue};
+    box-shadow: 0px 7px 0px 0px ${colors.darkBlue};
+    color: ${colors.black};
+    font-size: 30px;
+    height: 70px;
+    margin: 10px 5px;
+    width: 70px;
+    -webkit-text-stroke: 1px ${colors.mainBlue};
+    font-weight: 700;
+        
+    @keyframes buttonAnim {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
 `
 
 const ReplicatorButton = ({ 
-	index, 
-	value, 
-	callback, 
-	disabled,
+    index, 
+    value, 
+    callback, 
+    disabled,
 }) => {
   return (
-  	<ReplicatorButtonStyled 
+    <ReplicatorButtonStyled 
       className="replicator"
       onClick={() => callback(index)}
     >
@@ -45,7 +45,7 @@ const ReplicatorButton = ({
 }
 
 ReplicatorButton.propTypes = {
-	index: number.isRequired,
+    index: number.isRequired,
   value: number.isRequired,
   callback: func.isRequired,
 }

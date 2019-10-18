@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import Replicators from './components/Replicators'
 import ReplicatorButton from './components/ReplicatorButton'
-import { Button, CircularButton } from './components/buttons'
+import { Button } from './components/buttons'
 import Authority from './components/Authority'
 import './App.css'
 
@@ -56,7 +56,6 @@ const App = () => {
       )
     })
   }
-
 
   return (
     <div className="App">
