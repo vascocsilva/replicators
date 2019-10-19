@@ -59,7 +59,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="App-header">
         <ButtonWrapper>
           <Button
             onClick={handleAddReplicator}
@@ -73,7 +73,7 @@ const App = () => {
         </Replicators>
         
         <Authority />
-      </header>
+      </div>
     </div>
   );
 }
