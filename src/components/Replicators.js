@@ -8,6 +8,7 @@ const ReplicatorsStyled = styled.div`
     border-radius: 50%;
     box-sizing: border-box;
     padding: 30px 60px;
+    max-width: 650px;
     min-height: 330px;
     transform: rotate3d(1, 0, 0, 50deg);
     width: 95%;
