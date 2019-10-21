@@ -14,7 +14,7 @@
   font-size: calc(10px + 2vmin);
   justify-content: center;
   min-height: 100vh;
-  perspective: 600px;
+  perspective: 2000px;
 }
 
 .App-link {
